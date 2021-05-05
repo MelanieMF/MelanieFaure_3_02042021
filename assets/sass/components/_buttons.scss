@@ -1,0 +1,15 @@
+@import "./../utils/variables";
+
+.chooserestaurant__button {
+  padding: 0.9rem 1.25rem;
+  border-radius: 1.8rem;
+  color: #FFF;
+  background: linear-gradient(180deg, $color-secondary, $color-primary);
+  box-shadow: 3px 4px 5px $color-quaternary;
+  transition: box-shadow 250ms ease-in-out;
+  border: none;
+  font-size: 15px;
+  &:hover {
+    background: lighten($color-primary, 10%);
+  }
+}

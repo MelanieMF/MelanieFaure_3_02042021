@@ -1,0 +1,84 @@
+@import "./../utils/variables";
+@import "./../utils/mixins";
+
+.localisation {
+  margin-top: -1.05rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-quaternary;
+  background-color: lighten($color-quaternary,10%);
+  &__text {
+    font-family: Roboto;
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: darken($color-quaternary, 80%);
+  }
+  .fas {
+    padding-right: 0.6rem;
+    color: darken($color-quaternary, 60%);
+    }
+}
+
+.concept {
+  padding-bottom: 40px;
+  &__title {
+    margin-left: 1.25rem;
+  }
+  &__notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid red;
+    &__steps {   
+      width: 100%;
+      list-style: none;
+      border-radius: 1.2rem;
+      background-color: $color-quaternary-light;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+      margin: 0px 0px 20px 10px;
+      padding-top: 20px; 
+      padding-bottom: 20px;
+      border: solid yellow;
+      &__number {
+      display: flex;
+      border: solid purple;
+      &:hover {
+        background-color: $color-primary-light;
+      }
+      }
+    }
+  }
+}
+
+.chooserestaurant {
+  background-color: lighten($color-quaternary,15%);
+  width: 100%;
+  text-align: center;
+  padding: 1.8rem 0rem 1.8rem 0rem;
+  &__title {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 0.6rem;
+  }
+  &__text {
+    margin: auto;
+    padding-bottom: 1.8rem;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+}
+
+.restaurants__card {  
+  width: 18rem; 
+  background-color: #FFFFFF;
+  border-radius: 1.2rem;
+  margin-bottom: 1rem;
+  margin-left: 1.2rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  &__img {
+    width: 18rem;
+    max-height: 12rem;
+    border-radius: 1.2rem 1.2rem 0 0;
+  }
+}
