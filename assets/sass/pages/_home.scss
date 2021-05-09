@@ -21,38 +21,69 @@
 }
 
 .concept {
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__title {
-    margin-left: 1.25rem;
-  }
-  &__notice {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid red;
-    &__steps {   
-      width: 100%;
-      list-style: none;
-      border-radius: 1.2rem;
-      background-color: $color-quaternary-light;
-      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
-      margin: 0px 0px 20px 10px;
-      padding-top: 20px; 
-      padding-bottom: 20px;
-      border: solid yellow;
-      &__number {
-      display: flex;
-      border: solid purple;
-      &:hover {
-        background-color: $color-primary-light;
-      }
-      }
+    font-size: 1.5rem;
+    margin-left: 0.8rem;
+    @include desktop {
+      text-align: center;
     }
   }
 }
 
+.concept__steps {
+  width: 100%;
+  @include desktop {
+    display: flex;
+    width: 95%;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 85%;
+    background-color: $color-quaternary-light;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    margin: 0.75rem 0 0.75rem 1.12rem;
+    border-radius: 1rem;
+    &:hover, .fas:hover {
+      background-color: lighten($color-primary,35%);
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    @include element-shadow;
+    @include desktop {
+      margin: 0 1.5rem 4rem 1.5rem;
+    }
+  }
+  &__number {
+    position: absolute;
+    top: 0.3rem;
+    left: -0.75rem;
+    background-color: $color-primary;
+    color: #FFF;
+    border-radius: 50%;
+    padding: 0.3rem 0.55rem 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  &__icons {
+    margin: 1rem 0 1rem 1.5rem;
+    color: darken($color-quaternary,45%);
+  }
+  &__text {
+    margin: 1rem 0rem 1rem 2rem;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
+
 .chooserestaurant {
-  background-color: lighten($color-quaternary,15%);
+  background-color: $color-quaternary-light;
   width: 100%;
   text-align: center;
   padding: 1.8rem 0rem 1.8rem 0rem;
@@ -69,16 +100,71 @@
   }
 }
 
+.restaurants {
+  background-color: $color-quaternary-light;
+  padding: 0.5rem 0 0rem 0;
+}
+
+.restaurants__title {
+  margin: 1rem 0.8rem;
+  @include desktop {
+    text-align: center;
+  }
+}
+
+.restaurants__cards {
+  padding: 1rem 0.2rem;
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -1rem;
+  }
+}
+
 .restaurants__card {  
-  width: 18rem; 
-  background-color: #FFFFFF;
+  width: 95%; 
+  position: relative;
+  background-color: #FFF;
   border-radius: 1.2rem;
-  margin-bottom: 1rem;
-  margin-left: 1.2rem;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 2.5%;
+
+  @include desktop {
+    height: 17rem;
+    width: 22rem;
+    margin-right: 1rem;
+  }
   &__img {
-    width: 18rem;
-    max-height: 12rem;
+    width: 100%;
+    height: 10rem;
     border-radius: 1.2rem 1.2rem 0 0;
+    @include desktop {
+      height: 12.5rem;
+      width: 22rem;
+    }
+  }
+  &__new {
+    display: block;
+    position: absolute;
+    background-color: $color-tertiary;
+    color: darken($color-tertiary,35%);
+    padding: 0.2rem 0.6rem;
+    font-weight: bold;
+    top: 0;
+    right: 0.7rem;
+  }
+  &__description {
+    height: 3.5rem;
+    position: relative;
+  }
+  &__name {
+    margin: 2% 0 2% 2%;
+    color: #000;
+  }
+  &__heart {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.9rem;
+    border: none;
+    background-color: #FFF; 
   }
 }

@@ -5,7 +5,7 @@ header {
   .logo {
   text-align: center;
   padding: 0.3rem 0 0.3rem 0;
-  box-shadow: 0px 0px 0.6rem rgba(0, 0, 0, 0.6);
+  @include hover-shadow;
   //&--menus_restaurant {
     //box-shadow: none;
     //}

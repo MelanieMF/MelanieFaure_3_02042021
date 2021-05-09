@@ -1,4 +1,19 @@
+/* Box-Shadow */
+@mixin element-shadow {
+  box-shadow: 0.1rem 0.2rem 0.3rem $color-quaternary;
+}
+
+@mixin hover-shadow {
+  box-shadow: 0.1rem 0.2rem 0.3rem ($color-quaternary,10%);
+}
+
 /*Media queries*/
+@mixin align-content { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 
 @mixin small-mobile {
   @media screen and (max-width: 320px) {

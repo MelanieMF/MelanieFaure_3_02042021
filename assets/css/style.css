@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -18,18 +18,24 @@ a {
   text-decoration: none;
 }
 
-.chooserestaurant__button {
+/* Box-Shadow */
+/*Media queries*/
+.button {
   padding: 0.9rem 1.25rem;
   border-radius: 1.8rem;
   color: #FFF;
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-  box-shadow: 3px 4px 5px #D3D3D3;
-  transition: box-shadow 250ms ease-in-out;
+  background: linear-gradient(#9356DC, #FF79DA);
+  box-shadow: 0.1rem 0.2rem 0.3rem #D3D3D3;
   border: none;
-  font-size: 15px;
+  font-size: 0.9rem;
 }
-.chooserestaurant__button:hover {
-  background: #ae80e5;
+.button:hover {
+  background: linear-gradient(#a16be0, #ff9de4);
+  box-shadow: 0.1rem 0.2rem 0.3rem #D3D3D3, 10%;
+}
+
+.button--menu {
+  padding: 0.9rem 2.5rem;
 }
 
 header {
@@ -40,9 +46,11 @@ header {
 header .logo {
   text-align: center;
   padding: 0.3rem 0 0.3rem 0;
-  box-shadow: 0px 0px 0.6rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0.1rem 0.2rem 0.3rem #D3D3D3, 10%;
 }
 
+/* Box-Shadow */
+/*Media queries*/
 .footer {
   background-color: #333333;
   padding-bottom: 1rem;
@@ -53,19 +61,30 @@ header .logo {
   font-weight: 300;
   padding-top: 1rem;
 }
+@media screen and (min-width: 1024px) {
+  .footer__title {
+    text-align: center;
+  }
+}
 .footer__content {
   list-style: none;
 }
+@media screen and (min-width: 1024px) {
+  .footer__content {
+    text-align: center;
+  }
+}
 .footer__content li {
-  padding: 5px;
+  padding: 0.3rem;
 }
 .footer__content li a {
   color: #fff;
 }
 .footer__content li a span {
-  padding-left: 5px;
+  padding-left: 0.3rem;
 }
 
+/* Box-Shadow */
 /*Media queries*/
 .localisation {
   margin-top: -1.05rem;
@@ -87,34 +106,71 @@ header .logo {
 }
 
 .concept {
-  padding-bottom: 40px;
-}
-.concept__title {
-  margin-left: 1.25rem;
-}
-.concept__notice {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid red;
 }
-.concept__notice__steps {
+.concept__title {
+  font-size: 1.5rem;
+  margin-left: 0.8rem;
+}
+@media screen and (min-width: 1024px) {
+  .concept__title {
+    text-align: center;
+  }
+}
+
+.concept__steps {
   width: 100%;
-  list-style: none;
-  border-radius: 1.2rem;
-  background-color: #ededed;
-  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
-  margin: 0px 0px 20px 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: solid yellow;
 }
-.concept__notice__steps__number {
+@media screen and (min-width: 1024px) {
+  .concept__steps {
+    display: flex;
+    width: 95%;
+  }
+}
+.concept__steps__items {
   display: flex;
-  border: solid purple;
+  align-items: center;
+  position: relative;
+  width: 85%;
+  background-color: #f9f9f9;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  margin: 0.75rem 0 0.75rem 1.12rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.2rem 0.3rem #D3D3D3;
 }
-.concept__notice__steps__number:hover {
-  background-color: #ae80e5;
+.concept__steps__items:hover, .concept__steps__items .fas:hover {
+  background-color: #f2eafb;
+}
+.concept__steps__items:hover:hover, .concept__steps__items .fas:hover:hover {
+  color: #9356DC;
+}
+@media screen and (min-width: 1024px) {
+  .concept__steps__items {
+    margin: 0 1.5rem 4rem 1.5rem;
+  }
+}
+.concept__steps__number {
+  position: absolute;
+  top: 0.3rem;
+  left: -0.75rem;
+  background-color: #9356DC;
+  color: #FFF;
+  border-radius: 50%;
+  padding: 0.3rem 0.55rem 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.concept__steps__icons {
+  margin: 1rem 0 1rem 1.5rem;
+  color: #606060;
+}
+.concept__steps__text {
+  margin: 1rem 0rem 1rem 2rem;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .chooserestaurant {
@@ -135,20 +191,118 @@ header .logo {
   font-size: 1rem;
 }
 
-.restaurants__card {
-  width: 18rem;
-  background-color: #FFFFFF;
-  border-radius: 1.2rem;
-  margin-bottom: 1rem;
-  margin-left: 1.2rem;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-}
-.restaurants__card__img {
-  width: 18rem;
-  max-height: 12rem;
-  border-radius: 1.2rem 1.2rem 0 0;
+.restaurants {
+  background-color: #f9f9f9;
+  padding: 0.5rem 0 0rem 0;
 }
 
+.restaurants__title {
+  margin: 1rem 0.8rem;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__title {
+    text-align: center;
+  }
+}
+
+.restaurants__cards {
+  padding: 1rem 0.2rem;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -1rem;
+  }
+}
+
+.restaurants__card {
+  width: 95%;
+  position: relative;
+  background-color: #FFF;
+  border-radius: 1.2rem;
+  margin-left: 2.5%;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__card {
+    height: 17rem;
+    width: 22rem;
+    margin-right: 1rem;
+  }
+}
+.restaurants__card__img {
+  width: 100%;
+  height: 10rem;
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__card__img {
+    height: 12.5rem;
+    width: 22rem;
+  }
+}
+.restaurants__card__new {
+  display: block;
+  position: absolute;
+  background-color: #99E2D0;
+  color: #2c9c81;
+  padding: 0.2rem 0.6rem;
+  font-weight: bold;
+  top: 0;
+  right: 0.7rem;
+}
+.restaurants__card__description {
+  height: 3.5rem;
+  position: relative;
+}
+.restaurants__card__name {
+  margin: 2% 0 2% 2%;
+  color: #000;
+}
+.restaurants__card__heart {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.9rem;
+  border: none;
+  background-color: #FFF;
+}
+
+/* Box-Shadow */
+/*Media queries*/
+.footer {
+  background-color: #333333;
+  padding-bottom: 1rem;
+}
+.footer__title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__title {
+    text-align: center;
+  }
+}
+.footer__content {
+  list-style: none;
+}
+@media screen and (min-width: 1024px) {
+  .footer__content {
+    text-align: center;
+  }
+}
+.footer__content li {
+  padding: 0.3rem;
+}
+.footer__content li a {
+  color: #fff;
+}
+.footer__content li a span {
+  padding-left: 0.3rem;
+}
+
+/* Box-Shadow */
 /*Media queries*/
 
 /*# sourceMappingURL=style.css.map */
