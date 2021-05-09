@@ -18,3 +18,56 @@
 .button--menu {
   padding: 0.9rem 2.5rem;
 }
+
+.button--heart {
+  position: relative;
+  border: none;
+  background: transparent;
+  .far {
+    font-size: 1.8rem;
+    color: darken($color-quaternary,10%);
+}
+.fas {
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient($color-secondary, $color-primary);
+    background-clip: border-box; 
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(0);
+    transform-origin: bottom;
+}
+  &:hover {
+      .far {
+          background: linear-gradient($color-secondary, $color-primary);
+          background-clip: border-box;
+          -webkit-background-clip: text;
+      }
+      .fas {
+          -webkit-animation: heartfilling 700ms ease-in-out forwards;
+          animation: heartfilling 700ms ease-in-out forwards;
+      }
+    }
+  }
+
+@-webkit-keyframes heartfilling {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes heartfilling {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}

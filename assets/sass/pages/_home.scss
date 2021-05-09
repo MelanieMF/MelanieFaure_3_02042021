@@ -1,17 +1,19 @@
 @import "./../utils/variables";
 @import "./../utils/mixins";
 
+/* Trouver son restaurant */
+
 .localisation {
-  margin-top: -1.05rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $color-quaternary;
   background-color: lighten($color-quaternary,10%);
+  margin-top: -17px;
   &__text {
     font-family: Roboto;
     font-size: 0.9rem;
-    font-weight: 900;
+    font-weight: 700;
     color: darken($color-quaternary, 80%);
   }
   .fas {
@@ -19,6 +21,28 @@
     color: darken($color-quaternary, 60%);
     }
 }
+
+/* Description site */
+
+.chooserestaurant {
+  background-color: $color-quaternary-light;
+  width: 100%;
+  text-align: center;
+  padding: 1.8rem 0rem 1.8rem 0rem;
+  &__title {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 0.6rem;
+  }
+  &__text {
+    margin: auto;
+    padding-bottom: 1.8rem;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+}
+
+/* Concept fonctionnement du site */
 
 .concept {
   display: flex;
@@ -48,9 +72,9 @@
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
     margin: 0.75rem 0 0.75rem 1.12rem;
     border-radius: 1rem;
-    &:hover, .fas:hover {
+    &:hover {
       background-color: lighten($color-primary,35%);
-      &:hover {
+      .fas {
         color: $color-primary;
       }
     }
@@ -82,33 +106,14 @@
   }
 }
 
-.chooserestaurant {
-  background-color: $color-quaternary-light;
-  width: 100%;
-  text-align: center;
-  padding: 1.8rem 0rem 1.8rem 0rem;
-  &__title {
-    width: 80%;
-    margin: auto;
-    padding-bottom: 0.6rem;
-  }
-  &__text {
-    margin: auto;
-    padding-bottom: 1.8rem;
-    font-weight: 100;
-    font-size: 1rem;
-  }
-}
-
 .restaurants {
   background-color: $color-quaternary-light;
   padding: 0.5rem 0 0rem 0;
-}
-
-.restaurants__title {
-  margin: 1rem 0.8rem;
-  @include desktop {
-    text-align: center;
+    &__title {
+    margin: 1rem 0.8rem;
+    @include desktop {
+      text-align: center;
+    }
   }
 }
 
@@ -127,11 +132,14 @@
   background-color: #FFF;
   border-radius: 1.2rem;
   margin-left: 2.5%;
-
+  @include element-shadow;
   @include desktop {
     height: 17rem;
     width: 22rem;
     margin-right: 1rem;
+    &:hover {
+      @include hover-shadow;
+    }
   }
   &__img {
     width: 100%;
@@ -148,7 +156,8 @@
     background-color: $color-tertiary;
     color: darken($color-tertiary,35%);
     padding: 0.2rem 0.6rem;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 0.9rem;
     top: 0;
     right: 0.7rem;
   }
@@ -164,7 +173,5 @@
     position: absolute;
     top: 0.2rem;
     right: 0.9rem;
-    border: none;
-    background-color: #FFF; 
   }
 }
