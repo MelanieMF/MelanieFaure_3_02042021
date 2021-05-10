@@ -24,8 +24,8 @@
     <img class="restaurant__picture__img" src="../assets/images/restaurants/a_la_francaise.jpg" alt="Photo d'un plat du restaurant à la Française">
   </section>
   <!-- Main | Nom du restaurant et boutton like -->
-  <main class="menus">
-    <div class="menus__container">
+  <main class="restaurant">
+    <div class="restaurant__menus">
       <h2 class="title__heart">À la Française</h2>
       <button class="button--heart">
         <i class="far fa-heart"></i>
@@ -34,45 +34,45 @@
     </div>
 
     <!-- ENTRÉES -->
-    <section class="starter">
-      <div class="choice">
-        <p>ENTRÉES</p>
-        <div class="underline"></div>
+    <section class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">ENTRÉES</p>
+        <div class="card__dishes__underline"></div>
       </div>
 
-      <div class="dishes">
+      <div class="menu">
         <!-- Proposal -->
-        <a href="#" class="dish__menu">
+        <a href="#" class="menu__dishes">
           <article> 
             <h3 class="menu__dishes__title">Tartare de poulpe acidulé</h3>
             <p class="menu__dishes__description">Aux zests d'orange</p>
             <p class="menu__dishes__price">25€</p>
             <!-- Choose it -->
-            <div class="animation__selection">
+            <div class="menu__dishes__animation">
               <i class="fas fa-check-circle"></i>
             </div>
           </article>
         </a>
         <!-- Proposal -->
-        <a href="#" class="proposal">
+        <a href="#" class="menu__dishes">
           <article>
-            <h3>Velouté de légumes d'antan</h3>
-            <p>Carotte, panais, topinambour</p>
-            <p>35€</p>
+            <h3 class="menu__dishes__title">Velouté de légumes d'antan</h3>
+            <p class="menu__dishes__description">Carotte, panais, topinambour</p>
+            <p class="menu__dishes__price">35€</p>
             <!-- Choose it -->
-            <div>
+            <div class="menu__dishes__animation">
               <i class="fas fa-check-circle"></i>
             </div>
           </article>
         </a>
         <!-- Proposal -->
-        <a href="#" class="proposal">
+        <a href="#" class="menu__dishes">
           <article class="article">
-            <h3>Soupe à l'oignon</h3>
-            <p>Revisitée</p>
-            <p>20€</p>
+            <h3 class="menu__dishes__title">Soupe à l'oignon</h3>
+            <p class="menu__dishes__description">Revisitée</p>
+            <p class="menu__dishes__price">20€</p>
             <!-- Choose it -->
-            <div>
+            <div class="menu__dishes__animation">
               <i class="fas fa-check-circle"></i>
             </div>
           </article>
@@ -81,79 +81,95 @@
     </section>
 
     <!-- PLATS -->
-    <section class="choice">
-      <div class="starter">
-        <p>PLATS</p>
-        <div class="underline"></div>
+    <section  class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">PLATS</p>
+        <div class="card__dishes__underline"></div>
       </div>
-      <!-- Proposal -->
-      <article>
-        <h3>Coquilles Saint-Jacques</h3>
-        <p>Accompagné d'une purée de panais</p>
-        <p>40€</p>
-        <!-- Choose it -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </article>
-      <!-- Proposal -->
-      <article>
-        <h3>Magret de canard</h3>
-        <p>Et parmentier de pommes de terres</p>
-        <p>35€</p>
-        <!-- Choose it -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </article>
-      <!-- Proposal -->
-      <article>
-        <h3>Pigeaonneau d'Ille-et-Vilaine</h3>
-        <p>Sur son lit de gnocchis aux légumes</p>
-        <p>44€</p>
-        <!-- Choose it -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </article>
+
+      <div class="menu">
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Coquilles Saint-Jacques</h3>
+            <p class="menu__dishes__description">Accompagné d'une purée de panais</p>
+            <p class="menu__dishes__price">40€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Magret de canard</h3>
+            <p class="menu__dishes__description">Et parmentier de pommes de terres</p>
+            <p class="menu__dishes__price">35€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Pigeaonneau d'Ille-et-Vilaine</h3>
+            <p class="menu__dishes__description">Sur son lit de gnocchis aux légumes</p>
+            <p class="menu__dishes__price">44€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
     </section>
 
     <!-- DESSERTS -->
-    <section class="choice">
-      <div class="starter">
-        <p>DESSERTS</p>
-        <div class="underline"></div>
+    <section  class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">DESSERTS</p>
+        <div class="card__dishes__underline"></div>
       </div>
-      <!-- Proposal -->
-      <article>
-        <h3>Pétales de violettes glacés</h3>
-        <p>Et purée de noisettes</p>
-        <p>18€</p>
-        <!-- Choose it -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </article>
-      <!-- Proposal -->
-      <article>
-        <h3>Fondant au chocolat</h3>
-        <p>Revisité</p>
-        <p>22€</p>
-        <!-- Choose it -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </article>
-      <!-- Proposal -->
-      <article>
-        <h3>Millefeuille croustillant</h3>
-        <p>Myrtilles et pâte d'amande</p>
-        <p>23€</p>
-        <!-- Choose it -->
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </article>
+
+      <div class="menu">
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Pétales de violettes glacés</h3>
+            <p class="menu__dishes__description">Et purée de noisettes</p>
+            <p class="menu__dishes__price">18€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Fondant au chocolat</h3>
+            <p class="menu__dishes__description">Revisité</p>
+            <p class="menu__dishes__price">22€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Millefeuille croustillant</h3>
+            <p class="menu__dishes__description">Myrtilles et pâte d'amande</p>
+            <p class="menu__dishes__price">23€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
       <button class="button button--menu">Commander</button>
     </section>
   </main>

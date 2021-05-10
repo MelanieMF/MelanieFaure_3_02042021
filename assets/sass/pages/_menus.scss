@@ -10,7 +10,7 @@
 }
 
 .restaurant__menus {
-  background-color: $color-quaternary;
+  background-color: $color-quaternary-light;
   border-radius: 1.8rem 1.8rem 0 0;
   &__container {
     display: flex;
@@ -29,13 +29,13 @@
 
 /* Nom des plats */
 
-.menus {
+.restaurant {
   border: solid purple;
   position: relative;
-  background-color: $color-quaternary;
+  background-color: $color-quaternary-light;
   border-radius: 2rem 2rem 0 0;
   margin-top: -2rem;
-  &__container {
+  &__menus {
     display: flex;
     justify-content: space-between;
     border-radius: 2rem 2rem 0 0;
@@ -43,103 +43,75 @@
   }
 }
 
-
-.starter {
-  border: solid red;
-}
-
-.choice {
-  border: solid blue;
-}
-
-.underline {
-  background-color: $color-tertiary;
-  width: 40px;
-  height: 3px;
-  margin-bottom: 15px;
-}
-
-.menu__dishes {
-  position: relative;
-  border: solid green;
-  height: 4rem;
-  width: 98%;
-  background-color: #FFF;
-  border-radius: 1rem;
-  @include element-shadow;
-    &__price {
-      position: absolute;
-      top: 0.5rem;
-      right: 1rem;
-      transform: translateX(0);
-      transition: transform 450ms ease-in-out;
-      }
-      &:hover, &:active {
-        + .animation__selector {
-            transform: translateX(0%);
-            .fas {
-                transform: rotate(1turn);
-          }
-        }
-      }
-    
+.card {
+  &__dishes {
+    border: solid grey;
+    &__title {
+      font-size: 1.1em;
+      font-weight: 400;
+      margin-left: 0.3rem;
+    }
+    &__underline {
+      background-color: $color-tertiary;
+      width: 2.5rem;
+      height: 0.15rem;
+      margin: -0.8rem 0 0.9rem 0.3rem;
+    }
   }
+}
 
-
-.dishes  {
+.menu  {
   border: solid yellow;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.selection {
-  height: 70px;
-  width: 60px;
-  background-color: $color-tertiary;
-  color: white;
-  font-size: 1.5em;
-  border-radius: 0px 17px 17px 0px;
-  position: absolute;
-  bottom: 15px;
-  right: 0px;
-  transform: translateX(100%);
-  transition: transform 500ms ease-in-out;
-  .fas {
-      position: absolute;
-      top: 23px;
-      right: 18px;
-      transform: rotate(0);
-      transition: transform  500ms ease-in-out;
+  &__dishes {
+    position: relative;
+    height: 4rem;
+    width: 98%;
+    background-color: #FFF;
+    margin: 0.3rem 0.2rem 0.3rem 0;
+    color: #000;
+    border-radius: 1rem;
+    @include element-shadow;
+    @include desktop {
+      width: 30%;
     }
-  }
-
-@-webkit-keyframes validation-icon {
-  0% {
-      opacity: 0;
-      transform: translateY(10%);
-  }
-  50% {
-      opacity: 0.5;
-      transform: translateY(5%);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-@keyframes validation-icon {
-  0% {
-      opacity: 0;
-      transform: translateY(10%);
-  }
-  50% {
-      opacity: 0.5;
-      transform: translateY(5%);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
+    &__title {
+      margin: 0.4rem;
+      font-size: 1.1em;
+    }
+    &__description {
+      margin: 0.4rem;
+      font-size: 1em;
+    }
+    &__price {
+      position: absolute;
+      top: 1.15rem;
+      right: 1rem;
+      font-weight: 500;
+    }
+    &__animation {
+      height: 4rem;
+      width: 20%;
+      position: absolute;
+      top: 0rem;
+      right: 0rem;
+      background-color: $color-tertiary;
+      color: white;
+      font-size: 1.5em;
+      border-radius: 0 1rem 1rem 0;
+      @include desktop {
+        width: 13%;
+      }
+      .fas {
+        position: absolute;
+        top: 1.3rem;
+        right: 1rem;
+        @include desktop {
+          right: 1.2rem;
+        }
+      }
+    }
   }
 }
