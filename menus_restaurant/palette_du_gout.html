@@ -12,134 +12,167 @@
     
   <!-- Font awesome -->
   <script src="https://kit.fontawesome.com/c6c3a8d163.js" crossorigin="anonymous"></script>
-  <title>Menu la palette du goût | Oh my food!</title>
+  <title>Menu à la française | Oh my food!</title>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1 class="logo">ohmyfood</h1>
+    <h1 class="logo logo__menus">ohmyfood</h1>
     <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
   </header>
-  <!-- Main -->
-  <main>
-    <div>
-      <h2>La Palette du goût</h2>
-      <button class="restaurants__card__heart button--heart">
+  <section class="restaurant__picture">
+    <img class="restaurant__picture__img" src="../assets/images/restaurants/palette_du_gout.jpg" alt="Photo d'un plat du restaurant La Palette du Goût">
+  </section>
+  
+  <!-- Main | Nom du restaurant et boutton like -->
+  <main class="restaurant">
+    <div class="restaurant__menus">
+      <h2 class="title__heart">La Palette du goût</h2>
+      <button class="button--heart">
         <i class="far fa-heart"></i>
         <i class="fas fa-heart"></i>
       </button>
     </div>
-    <!-- Entrées -->
-    <section>
-      <div>
-        <p>entrées</p>
-        <div></div>
+
+    <!-- ENTRÉES -->
+    <section class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">ENTRÉES</p>
+        <div class="card__dishes__underline"></div>
       </div>
-      <div>
-        <div>
-          <h3>Fricassée d'escargot</h3>
-          <p>Au piment d'espelette</p>
-          <p>25€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h3>Foie gras de canard mi-cuit</h3>
-          <p>Et ses copeaux de truffe noire</p>
-          <p>35€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h3>Oeuf au plat</h3>
-          <p>Assaisonné à la truffe sur lit de...</p>
-          <p>20€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Plats -->
-    <section>
-      <div>
-        <p>plats</p>
-        <div></div>
-      </div>
-      <div>
-        <div>
-          <h3>Filet de boeuf aux herbes</h3>
-          <p>Accompagné de sa rimbambelle de légumes</p>
-          <p>40€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h3>Parmentier de que de boeuf</h3>
-          <p>À la truffe noire sur sa purée de panais</p>
-          <p>35€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h3>Filet de Turbot</h3>
-          <p>Aux agrumes</p>
-          <p>20€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
+
+      <div class="menu">
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article> 
+            <h3 class="menu__dishes__title">Fricassée d'escargot</h3>
+            <p class="menu__dishes__description">Au piment d'espelette</p>
+            <p class="menu__dishes__price">25€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Foie gras de canard mi-cuit</h3>
+            <p class="menu__dishes__description">Et ses copeaux de truffe noire</p>
+            <p class="menu__dishes__price">35€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article class="article">
+            <h3 class="menu__dishes__title">Oeuf au plat</h3>
+            <p class="menu__dishes__description">Assaisonné à la truffe sur lit de...</p>
+            <p class="menu__dishes__price">20€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
       </div>
     </section>
-    <!-- Desserts -->
-    <section>
-      <div>
-        <p>desserts</p>
-        <div></div>
+
+    <!-- PLATS -->
+    <section  class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">PLATS</p>
+        <div class="card__dishes__underline"></div>
       </div>
-      <div>
-        <div>
-          <h3>Paris-Brest</h3>
-          <p>Revisité</p>
-          <p>18€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
+
+      <div class="menu">
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Filet de boeuf aux herbes</h3>
+            <p class="menu__dishes__description">Accompagné de sa rimbambelle de légumes</p>
+            <p class="menu__dishes__price">40€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Parmentier de queue de boeuf</h3>
+            <p class="menu__dishes__description">À la truffe noire sur sa purée de panais</p>
+            <p class="menu__dishes__price">35€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Filet de Turbot</h3>
+            <p class="menu__dishes__description">Aux agrumes</p>
+            <p class="menu__dishes__price">20€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
       </div>
-      <div>
-        <div>
-          <h3>Macaron au chocolat d'exception</h3>
-          <p>Et glace à la vanille de Madagascar</p>
-          <p>22€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
+    </section>
+
+    <!-- DESSERTS -->
+    <section  class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">DESSERTS</p>
+        <div class="card__dishes__underline"></div>
       </div>
-      <div>
-        <div>
-          <h3>Mousse au chocolat</h3>
-          <p>Au piment d'espelette et à la truffe noire</p>
-          <p>23€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <button class="button">Commander</button>
+
+      <div class="menu">
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Paris-Brest</h3>
+            <p class="menu__dishes__description">Revisité</p>
+            <p class="menu__dishes__price">18€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Macaron au chocolat d'exception</h3>
+            <p class="menu__dishes__description">Et glace à la vanille de Madagascar</p>
+            <p class="menu__dishes__price">22€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Mousse au chocolat</h3>
+            <p class="menu__dishes__description">Au piment d'espelette et à la truffe noire</p>
+            <p class="menu__dishes__price">23€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+      <button class="button button--menu">Commander</button>
     </section>
   </main>
 

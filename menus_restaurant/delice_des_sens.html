@@ -9,138 +9,170 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   <link rel="icon" href="../assets/images/logo/ohmyfood@2x.svg">
-  
-  
+    
   <!-- Font awesome -->
   <script src="https://kit.fontawesome.com/c6c3a8d163.js" crossorigin="anonymous"></script>
-  <title>Menu délices des sens | Oh my food!</title>
+  <title>Menu à la française | Oh my food!</title>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1 class="logo">ohmyfood</h1>
+    <h1 class="logo logo__menus">ohmyfood</h1>
     <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
   </header>
-  <!-- Main -->
-  <main>
-    <div>
-      <h2>Le délice des sens</h2>
-      <button class="restaurants__card__heart button--heart">
+  <section class="restaurant__picture">
+    <img class="restaurant__picture__img" src="../assets/images/restaurants/delice_des_sens.jpg" alt="Photo d'un plat du restaurant le délice des sens">
+  </section>
+  
+  <!-- Main | Nom du restaurant et boutton like -->
+  <main class="restaurant">
+    <div class="restaurant__menus">
+      <h2 class="title__heart">Le délice des Sens</h2>
+      <button class="button--heart">
         <i class="far fa-heart"></i>
         <i class="fas fa-heart"></i>
       </button>
     </div>
-    <!-- Entrées -->
-    <section>
-      <div>
-        <p>entrées</p>
-        <div></div>
+
+    <!-- ENTRÉES -->
+    <section class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">ENTRÉES</p>
+        <div class="card__dishes__underline"></div>
       </div>
-      <div>
-        <div>
-          <h3>Tartare de thon</h3>
-          <p>Assaisonné au yuzu</p>
-          <p>25€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h3>Bouchée de homard croustillant</h3>
-          <p>Et sa farandole de petits légumes</p>
-          <p>35€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h3>Veloutée de cèpes</h3>
-          <p>Aux truffes</p>
-          <p>20€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-    </section>
-    <!-- Plats -->
-    <section>
-      <div>
-        <p>plats</p>
-        <div></div>
-      </div>
-      <div>
-        <div>
-          <h3>Poulet rôti aux herbes de provence</h3>
-          <p>Et sa crème de truffe</p>
-          <p>40€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h3>Langouste rôtie</h3>
-          <p>Et ses légumes de saison</p>
-          <p>35€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h3>Côte de boeuf angus</h3>
-          <p>Et sa purée de panais</p>
-          <p>44€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
+
+      <div class="menu">
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article> 
+            <h3 class="menu__dishes__title">Tartare de thon</h3>
+            <p class="menu__dishes__description">Assaisonné au yuzu</p>
+            <p class="menu__dishes__price">25€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Bouchée de homard croustillant</h3>
+            <p class="menu__dishes__description">Et sa farandole de petits légumes</p>
+            <p class="menu__dishes__price">35€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article class="article">
+            <h3 class="menu__dishes__title">Veloutée de cèpes</h3>
+            <p class="menu__dishes__description">Aux truffes</p>
+            <p class="menu__dishes__price">20€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
       </div>
     </section>
-    <!-- Desserts -->
-    <section>
-      <div>
-        <p>desserts</p>
-        <div></div>
+
+    <!-- PLATS -->
+    <section  class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">PLATS</p>
+        <div class="card__dishes__underline"></div>
       </div>
-      <div>
-        <div>
-          <h3>Farandole de desserts</h3>
-          <p>Du chef</p>
-          <p>18€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
+
+      <div class="menu">
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Poulet rôti aux herbes de provence</h3>
+            <p class="menu__dishes__description">Et sa crème de truffe</p>
+            <p class="menu__dishes__price">40€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Langouste rôtie</h3>
+            <p class="menu__dishes__description">Et ses légumes de saison</p>
+            <p class="menu__dishes__price">35€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Côte de boeuf angus</h3>
+            <p class="menu__dishes__description">Et sa purée de panais</p>
+            <p class="menu__dishes__price">44€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
       </div>
-      <div>
-        <div>
-          <h3>Crème brulée</h3>
-          <p>Revisitée</p>
-          <p>22€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
+    </section>
+
+    <!-- DESSERTS -->
+    <section  class="card">
+      <div class="card__dishes">
+        <p class="card__dishes__title">DESSERTS</p>
+        <div class="card__dishes__underline"></div>
       </div>
-      <div>
-        <div>
-          <h3>Tiramisu</h3>
-          <p>À la noisette</p>
-          <p>23€</p>
-        </div>
-        <div>
-          <i class="fas fa-check-circle"></i>
-        </div>
-      </div>
-      <button class="button">Commander</button>
+
+      <div class="menu">
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Farandole de desserts</h3>
+            <p class="menu__dishes__description">Du chef</p>
+            <p class="menu__dishes__price">18€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Crème brulée</h3>
+            <p class="menu__dishes__description">Revisitée</p>
+            <p class="menu__dishes__price">22€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+        <!-- Proposal -->
+        <a href="#" class="menu__dishes">
+          <article>
+            <h3 class="menu__dishes__title">Tiramisu</h3>
+            <p class="menu__dishes__description">À la noisette</p>
+            <p class="menu__dishes__price">23€</p>
+            <!-- Choose it -->
+            <div class="menu__dishes__animation">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </article>
+        </a>
+      <button class="button button--menu">Commander</button>
     </section>
   </main>
 
