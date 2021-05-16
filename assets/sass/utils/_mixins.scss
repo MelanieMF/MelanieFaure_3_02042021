@@ -8,18 +8,6 @@
 }
 
 /*Media queries*/
-@mixin align-content { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-@mixin small-mobile {
-  @media screen and (max-width: 320px) {
-    @content;
-  }
-}
 
 @mixin mobile {
   @media screen and (max-width: 420px) {
@@ -28,7 +16,7 @@
 }
 
 @mixin tablet {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
     @content;
   }
 }

@@ -193,6 +193,11 @@ header .fas {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .concept {
+    margin-left: 2rem;
+  }
+}
 .concept__title {
   font-size: 1.5rem;
   margin-left: 0.8rem;
@@ -277,6 +282,11 @@ header .fas {
     display: flex;
     justify-content: space-around;
     margin-bottom: -1rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .restaurants__cards {
+    flex-wrap: wrap;
   }
 }
 
