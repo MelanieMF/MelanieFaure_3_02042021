@@ -17,7 +17,15 @@
 
 .button--menu {
   padding: 0.9rem 2.5rem;
-  margin: 2rem 0 3rem 0;
+  @include mobile {
+    margin: 2rem 0 3rem 5rem;
+  }
+  @include tablet {
+    margin: 3rem 1rem 2rem 20rem;
+  }
+  @include desktop {
+    margin: 3rem 0 2rem 45rem;
+  }
 }
 
 .button--heart {

@@ -1,0 +1,19 @@
+{
+  "name": "p3_ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelanieMF/MelanieFaure_3_02042021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelanieMF/MelanieFaure_3_02042021/issues"
+  },
+  "homepage": "https://github.com/MelanieMF/MelanieFaure_3_02042021#readme"
+}

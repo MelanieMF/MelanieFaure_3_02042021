@@ -29,6 +29,13 @@
 
 /* Nom des plats */
 
+.container {
+    @include desktop {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .restaurant {
   border: solid purple;
   position: relative;
@@ -39,32 +46,51 @@
     display: flex;
     justify-content: space-between;
     border-radius: 2rem 2rem 0 0;
-    border: solid grey;
+    @include desktop {
+      margin: 1rem 4rem;
+    }
+    @include tablet {
+      margin: 1rem 1rem;
+    }
   }
 }
 
 .card {
+  @include desktop {
+    width: 30%;
+  }
   &__dishes {
-    border: solid grey;
+    width: 95%;
     &__title {
-      font-size: 1.1em;
+      font-size: 1.2em;
       font-weight: 400;
       margin-left: 0.3rem;
+      @include tablet {
+        margin-left: 1rem;
+      }
     }
     &__underline {
       background-color: $color-tertiary;
       width: 2.5rem;
       height: 0.15rem;
       margin: -0.8rem 0 0.9rem 0.3rem;
+      @include tablet {
+        margin-left: 1rem;
+      }
     }
   }
 }
 
 .menu  {
   border: solid yellow;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include tablet {
+    width: 60%;
+    margin: auto;
+  }
   &__dishes {
     position: relative;
     height: 4rem;
@@ -75,7 +101,7 @@
     border-radius: 1rem;
     @include element-shadow;
     @include desktop {
-      width: 30%;
+      width: 85%;
     }
     &__title {
       margin: 0.4rem;
@@ -102,7 +128,7 @@
       font-size: 1.5em;
       border-radius: 0 1rem 1rem 0;
       @include desktop {
-        width: 13%;
+        width: 15%;
       }
       .fas {
         position: absolute;
