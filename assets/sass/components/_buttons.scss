@@ -13,57 +13,42 @@
     background: linear-gradient(lighten($color-primary, 5%), lighten($color-secondary, 7%));
     @include hover-shadow;
   }
+  @include largescreen {
+    font-size: 1.8rem;
+    padding: 1.9rem 2rem;
+    font-weight: 600;
+    margin: 3rem;
+    border-radius: 5rem;
+  }
 }
 
 .button--menu {
+  display: block;
+  margin: 3rem auto 5rem;
   padding: 0.9rem 2.5rem;
-  @include mobile {
-    margin: 2rem 0 3rem 5rem;
   }
-  @include tablet {
-    margin: 3rem 1rem 2rem 20rem;
-  }
-  @include desktop {
-    margin: 3rem 0 2rem 45rem;
-  }
-}
 
 .button--heart {
   position: relative;
-  border: none;
-  background: transparent;
-  .far {
-    font-size: 1.8rem;
-    color: darken($color-quaternary,10%);
-}
-.fas {
-    font-size: 2rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient($color-secondary, $color-primary);
-    background-clip: border-box; 
-    -webkit-background-clip: text;
-    color: transparent;
-    transform: scale(0);
-    transform-origin: bottom;
-}
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 1.8rem;
+  color: darken($color-quaternary,10%);
+  background: linear-gradient($color-secondary, $color-primary);
+  background-clip: border-box; 
+  -webkit-background-clip: texte-stroke;
+  color: transparent;
+  transform: scale(0);
+  transform-origin: bottom;
   &:hover {
-      .far {
-          background: linear-gradient($color-secondary, $color-primary);
-          background-clip: border-box;
-          -webkit-background-clip: text;
-      }
-      .fas {
-          -webkit-animation: heartfilling 700ms ease-in-out forwards;
-          animation: heartfilling 700ms ease-in-out forwards;
-      }
+    -webkit-animation: heartanimation 500ms ease-in-out forwards;
+    animation: heartanimation 500ms ease-in-out forwards;
     }
   }
 
-@-webkit-keyframes heartfilling {
+@-webkit-keyframes heartanimation {
   0% {
       transform: scale(0);
   }
@@ -72,7 +57,7 @@
   }
 }
 
-@keyframes heartfilling {
+@keyframes heartanimation {
   0% {
       transform: scale(0);
   }

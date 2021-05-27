@@ -16,13 +16,19 @@
 }
 
 @mixin tablet {
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) and (max-width: 2560px) {
+    @content;
+  }
+}
+
+@mixin largescreen {
+  @media screen and (min-width: 2560px) {
     @content;
   }
 }
