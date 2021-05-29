@@ -26,42 +26,57 @@
   display: block;
   margin: 3rem auto 5rem;
   padding: 0.9rem 2.5rem;
-  }
+}
 
 .button--heart {
   position: relative;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  font-size: 1.8rem;
-  color: darken($color-quaternary,10%);
-  background: linear-gradient($color-secondary, $color-primary);
-  background-clip: border-box; 
-  -webkit-background-clip: texte-stroke;
-  color: transparent;
-  transform: scale(0);
-  transform-origin: bottom;
-  &:hover {
-    -webkit-animation: heartanimation 500ms ease-in-out forwards;
-    animation: heartanimation 500ms ease-in-out forwards;
+  border: none;
+  background: transparent;
+  .far {
+    font-size: 1.7rem;
+}
+.fas {
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient($color-secondary, $color-primary);
+    background-clip: border-box; 
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(0);
+    transform-origin: bottom;
+}
+&:hover, &:active {
+    .far {
+        background: linear-gradient($color-secondary, $color-primary);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    .fas {
+        -webkit-animation: heartanimation 1s ease-in-out forwards;
+        animation: heartanimation 1s ease-in-out forwards;
     }
   }
-
-@-webkit-keyframes heartanimation {
-  0% {
-      transform: scale(0);
-  }
-  100% {
-      transform: scale(1);
-  }
 }
-
-@keyframes heartanimation {
-  0% {
-      transform: scale(0);
-  }
-  100% {
-      transform: scale(1);
-  }
-}
+  
+    @-webkit-keyframes heartanimation {
+      0% {
+          transform: scale(0);
+      }
+      100% {
+          transform: scale(1);
+      }
+    }
+    
+    @keyframes heartanimation {
+      0% {
+          transform: scale(0);
+      }
+      100% {
+          transform: scale(1);
+      }
+    }

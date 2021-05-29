@@ -22,8 +22,9 @@
     margin: 1.8rem 0 1.8rem 1.8rem;
   }
   &__heart {
-    margin-right: 8rem;
-    border: rebeccapurple;    
+    position: absolute;
+    top: 3rem;
+    right: 8rem;  
   }
 }
 
@@ -57,12 +58,16 @@
     @include mobile {
       margin-left: 0;
     }
+  &__heart {
+    
+  }
   }
 }
 
 .card {
   @include desktop {
-    width: 30%;
+    width: 38%;
+    border: solid blue;
   }
   &__dishes {
     width: 95%;
@@ -93,14 +98,19 @@
   flex-direction: column;
   align-items: center;
   margin: 1rem auto;
-  @include desktop {
-    width: 98%;
-  }
+  opacity: 0;
+  transform: translateY(10%);
+  -webkit-animation: menuanimation 400ms ease-in-out forwards;
+          animation: menuanimation 400ms ease-in-out forwards;
   @include tablet {
     width: 60%;
     margin: auto;
   }
+  @include desktop {
+    width: 100%;
+  }
   &__dishes {
+    border: solid salmon;
     overflow: hidden;
     text-overflow: ellipsis;
     position: relative;
@@ -139,28 +149,86 @@
       right: 1rem;
       font-weight: 500;
     }
+    &:hover, &:active {
+      .fas {
+        transform: rotate(1turn);
+      }
+    .menu__dishes__title {
+      width: 80%;
+    }
+
+    .menu__dishes__description {
+      width: 60%;
+    }
+
+    .menu__dishes__price {
+      transition: 1s;
+      right: 5rem
+    }
+
+    .menu__dishes__animation {
+      opacity: 1;
+      transition: 1s;
+      right: 0;
+    }
+  }
     &__animation {
       height: 4rem;
       width: 20%;
       position: absolute;
       top: 0rem;
-      right: 0rem;
+      right: -6.2rem;
       background-color: $color-tertiary;
       color: white;
       font-size: 1.5em;
       border-radius: 0 1rem 1rem 0;
-      display: none;
       @include desktop {
-        width: 15%;
+        width: 13%;
+      }
+      &:hover, &:active .menu__dishes {
+        opacity: 1;
+        transform: translateX(13%);
       }
       .fas {
         position: absolute;
         top: 1.3rem;
         right: 1rem;
+        transform: rotate(0);
+        transition: transform  1s ease-in-out;
         @include desktop {
           right: 1.2rem;
         }
       }
     }
+  }
+}
+
+@-webkit-keyframes menuanimation {
+  0% {
+      opacity: 0;
+      transform: translateY(10%);
+  }
+  50% {
+      opacity: 0.5;
+      transform: translateY(5%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes menuanimation {
+  0% {
+      opacity: 0;
+      transform: translateY(10%);
+  }
+  50% {
+      opacity: 0.5;
+      transform: translateY(5%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
