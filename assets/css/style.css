@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
+/* Box-Shadow */
+/*Media queries*/
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
+}
+@media screen and (min-width: 2560px) {
+  body {
+    width: 70%;
+    margin: -2.1rem auto;
+  }
 }
 
 .logo, .restaurant__menus__title, .footer__title {
@@ -35,9 +43,9 @@ a {
 }
 @media screen and (min-width: 2560px) {
   .button {
-    font-size: 1.8rem;
-    padding: 1.9rem 2rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 2rem 2.5rem;
+    font-weight: 500;
     margin: 3rem;
     border-radius: 5rem;
   }
@@ -48,6 +56,14 @@ a {
   margin: 3rem auto 5rem;
   padding: 0.9rem 2.5rem;
 }
+@media screen and (min-width: 2560px) {
+  .button--menu {
+    font-size: 1.6rem;
+    padding: 1.5rem 4rem;
+    font-weight: 600;
+    border-radius: 5rem;
+  }
+}
 
 .button--heart {
   position: relative;
@@ -55,7 +71,12 @@ a {
   background: transparent;
 }
 .button--heart .far {
-  font-size: 1.7rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 2560px) {
+  .button--heart .far {
+    font-size: 2.5rem;
+  }
 }
 .button--heart .fas {
   font-size: 2rem;
@@ -71,6 +92,11 @@ a {
   transform: scale(0);
   transform-origin: bottom;
 }
+@media screen and (min-width: 2560px) {
+  .button--heart .fas {
+    font-size: 2.5rem;
+  }
+}
 .button--heart:hover .far, .button--heart:active .far {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: border-box;
@@ -78,18 +104,9 @@ a {
   color: transparent;
 }
 .button--heart:hover .fas, .button--heart:active .fas {
-  -webkit-animation: heartanimation 1s ease-in-out forwards;
   animation: heartanimation 1s ease-in-out forwards;
 }
 
-@-webkit-keyframes heartanimation {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 @keyframes heartanimation {
   0% {
     transform: scale(0);
@@ -138,7 +155,7 @@ header .fas {
   font-weight: 300;
   padding-top: 1rem;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .footer__title {
     text-align: center;
   }
@@ -162,7 +179,7 @@ header .fas {
     font-size: 1.8rem;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .footer__content {
     text-align: center;
   }
@@ -182,6 +199,97 @@ header .fas {
   padding-left: 0.3rem;
 }
 
+/* Box-Shadow */
+/*Media queries*/
+/* Loader */
+.loading {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading-page-opacity 4s ease-in-out both;
+}
+
+.loader {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__face {
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+  animation: animate 3s linear infinite;
+}
+.loader__face:nth-child(1) {
+  width: 20em;
+  height: 20em;
+  color: #FF79DA;
+  border-color: currentColor transparent transparent currentColor;
+  border-width: 0.2rem 0.2rem 0 0;
+  --deg: -45deg;
+  animation-direction: normal;
+}
+.loader__face:nth-child(2) {
+  width: 17em;
+  height: 17em;
+  color: #9356DC;
+  border-color: currentColor currentColor transparent transparent;
+  border-width: 0.2rem 0 0 0.2rem;
+  --deg: -135deg;
+  animation-direction: reverse;
+}
+.loader__face__circle {
+  position: absolute;
+  width: 50%;
+  height: 0.1rem;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  transform: rotate(var(--deg));
+  transform-origin: left;
+}
+.loader__face__circle::before {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 2em, 0 0 4em, 0 0 6em, 0 0 8em, 0 0 10em, 0 0 0 0.5em rgba(255, 255, 0, 0.1);
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes loading-page-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    display: none;
+  }
+}
 /* Trouver son restaurant */
 .localisation {
   display: flex;
@@ -193,7 +301,7 @@ header .fas {
 }
 @media screen and (min-width: 2560px) {
   .localisation {
-    margin-top: -31px;
+    margin-top: -2rem;
   }
 }
 .localisation__text {
@@ -261,7 +369,7 @@ header .fas {
   font-size: 1.5rem;
   margin-left: 0.8rem;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .concept__title {
     text-align: center;
   }
@@ -275,7 +383,7 @@ header .fas {
 .concept__steps {
   width: 100%;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .concept__steps {
     display: flex;
     width: 95%;
@@ -310,7 +418,7 @@ header .fas {
     width: 40%;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .concept__steps__items {
     margin: 0 1.5rem 4rem 1.5rem;
   }
@@ -367,21 +475,21 @@ header .fas {
 .restaurants__title {
   margin: 1rem 0.8rem;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .restaurants__title {
     text-align: center;
   }
 }
 @media screen and (min-width: 2560px) {
   .restaurants__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
 .restaurants__cards {
   padding: 1rem 0.2rem;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .restaurants__cards {
     display: flex;
     justify-content: space-around;
@@ -391,6 +499,13 @@ header .fas {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .restaurants__cards {
     width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .restaurants__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -413,7 +528,7 @@ header .fas {
     margin: 2rem 0;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .restaurants__card {
     height: 17rem;
     width: 21rem;
@@ -425,8 +540,8 @@ header .fas {
 }
 @media screen and (min-width: 2560px) {
   .restaurants__card {
-    height: 30rem;
-    width: 35rem;
+    height: 33rem;
+    width: 43rem;
   }
 }
 .restaurants__card__img {
@@ -440,7 +555,7 @@ header .fas {
     width: 21rem;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .restaurants__card__img {
     height: 12.5rem;
     width: 21rem;
@@ -448,8 +563,8 @@ header .fas {
 }
 @media screen and (min-width: 2560px) {
   .restaurants__card__img {
-    height: 23rem;
-    width: 35rem;
+    height: 25rem;
+    width: 43rem;
   }
 }
 .restaurants__card__new {
@@ -462,6 +577,11 @@ header .fas {
   font-size: 0.9rem;
   top: 0;
   right: 0.7rem;
+}
+@media screen and (min-width: 2560px) {
+  .restaurants__card__new {
+    font-size: 1.8rem;
+  }
 }
 .restaurants__card__description {
   height: 3.5rem;
@@ -494,7 +614,7 @@ header .fas {
   font-weight: 300;
   padding-top: 1rem;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .footer__title {
     text-align: center;
   }
@@ -518,7 +638,7 @@ header .fas {
     font-size: 1.8rem;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .footer__content {
     text-align: center;
   }
@@ -557,14 +677,37 @@ header .fas {
   font-size: 1.7em;
   margin: 1.8rem 0 1.8rem 1.8rem;
 }
+@media screen and (max-width: 425px) {
+  .restaurant__menus__title {
+    margin: 1.8rem 0 0 0.8rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .restaurant__menus__title {
+    font-size: 2.5rem;
+  }
+}
 .restaurant__menus__heart {
   position: absolute;
   top: 3rem;
   right: 8rem;
 }
+@media screen and (max-width: 425px) {
+  .restaurant__menus__heart {
+    top: 2rem;
+    right: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurant__menus__heart {
+    top: 3rem;
+    right: 3rem;
+  }
+}
 
 /* Nom des plats */
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .container {
     display: flex;
     justify-content: center;
@@ -583,7 +726,7 @@ header .fas {
   justify-content: space-between;
   border-radius: 2rem 2rem 0 0;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   .restaurant__menus {
     margin: 1rem 4rem;
   }
@@ -593,66 +736,66 @@ header .fas {
     margin: 1rem 1rem;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 425px) {
   .restaurant__title {
     margin-left: 0;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
-  .card {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .restaurant .card {
     width: 38%;
     border: solid blue;
   }
 }
-.card__dishes {
+.restaurant .card__dishes {
   width: 95%;
 }
-.card__dishes__title {
+.restaurant .card__dishes__title {
   font-size: 1.2em;
   font-weight: 400;
   margin-left: 0.3rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .card__dishes__title {
+  .restaurant .card__dishes__title {
     margin-left: 1rem;
   }
 }
-.card__dishes__underline {
+@media screen and (min-width: 2560px) {
+  .restaurant .card__dishes__title {
+    font-size: 1.8rem;
+  }
+}
+.restaurant .card__dishes__underline {
   background-color: #99E2D0;
   width: 2.5rem;
   height: 0.15rem;
   margin: -0.8rem 0 0.9rem 0.3rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .card__dishes__underline {
+  .restaurant .card__dishes__underline {
     margin-left: 1rem;
   }
 }
-
-.menu {
+.restaurant .menu {
   border: solid yellow;
   width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem auto;
-  opacity: 0;
-  transform: translateY(10%);
-  -webkit-animation: menuanimation 400ms ease-in-out forwards;
-  animation: menuanimation 400ms ease-in-out forwards;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .menu {
+  .restaurant .menu {
     width: 60%;
     margin: auto;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
-  .menu {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .restaurant .menu {
     width: 100%;
   }
 }
-.menu__dishes {
+.restaurant .menu__dishes {
   border: solid salmon;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -663,59 +806,109 @@ header .fas {
   margin: 0.3rem 0.2rem 0.3rem 0;
   color: #000;
   border-radius: 1rem;
+  opacity: 0;
+  animation: menu-animation 400ms ease-in-out both;
   box-shadow: 0.1rem 0.2rem 0.3rem #D3D3D3;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
-  .menu__dishes {
+.restaurant .menu__dishes--1 {
+  animation-delay: 0ms;
+}
+.restaurant .menu__dishes--2 {
+  animation-delay: 400ms;
+}
+.restaurant .menu__dishes--3 {
+  animation-delay: 800ms;
+}
+.restaurant .menu__dishes--4 {
+  animation-delay: 1200ms;
+}
+.restaurant .menu__dishes--5 {
+  animation-delay: 1600ms;
+}
+.restaurant .menu__dishes--6 {
+  animation-delay: 2000ms;
+}
+.restaurant .menu__dishes--7 {
+  animation-delay: 2400ms;
+}
+.restaurant .menu__dishes--8 {
+  animation-delay: 2800ms;
+}
+.restaurant .menu__dishes--9 {
+  animation-delay: 3200ms;
+}
+.restaurant .menu__dishes--10 {
+  animation-delay: 3600ms;
+}
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .restaurant .menu__dishes {
     width: 98%;
   }
 }
-.menu__dishes__title {
+@media screen and (min-width: 2560px) {
+  .restaurant .menu__dishes {
+    padding-bottom: 0.4rem;
+  }
+}
+.restaurant .menu__dishes__title {
   margin: 0.4rem;
   font-size: 1.1em;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: width 400ms ease-in-out;
 }
-.menu__dishes__description {
+@media screen and (min-width: 2560px) {
+  .restaurant .menu__dishes__title {
+    font-size: 1.5rem;
+  }
+}
+.restaurant .menu__dishes__description {
   margin: 0.4rem;
   font-size: 0.9em;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: width 400ms ease-in-out;
 }
-@media screen and (max-width: 420px) {
-  .menu__dishes__description {
+@media screen and (max-width: 425px) {
+  .restaurant .menu__dishes__description {
     width: 80%;
   }
 }
-.menu__dishes__price {
+@media screen and (min-width: 2560px) {
+  .restaurant .menu__dishes__description {
+    font-size: 1.3rem;
+  }
+}
+.restaurant .menu__dishes__price {
   position: absolute;
   top: 1.15rem;
   right: 1rem;
   font-weight: 500;
 }
-.menu__dishes:hover .fas, .menu__dishes:active .fas {
+@media screen and (min-width: 2560px) {
+  .restaurant .menu__dishes__price {
+    font-size: 1.2rem;
+  }
+}
+.restaurant .menu__dishes:hover .fas, .restaurant .menu__dishes:active .fas {
   transform: rotate(1turn);
 }
-.menu__dishes:hover .menu__dishes__title, .menu__dishes:active .menu__dishes__title {
+.restaurant .menu__dishes:hover .menu__dishes__title, .restaurant .menu__dishes:active .menu__dishes__title {
   width: 80%;
 }
-.menu__dishes:hover .menu__dishes__description, .menu__dishes:active .menu__dishes__description {
+.restaurant .menu__dishes:hover .menu__dishes__description, .restaurant .menu__dishes:active .menu__dishes__description {
   width: 60%;
 }
-.menu__dishes:hover .menu__dishes__price, .menu__dishes:active .menu__dishes__price {
+.restaurant .menu__dishes:hover .menu__dishes__price, .restaurant .menu__dishes:active .menu__dishes__price {
   transition: 1s;
   right: 5rem;
 }
-.menu__dishes:hover .menu__dishes__animation, .menu__dishes:active .menu__dishes__animation {
+.restaurant .menu__dishes:hover .menu__dishes__animation, .restaurant .menu__dishes:active .menu__dishes__animation {
   opacity: 1;
   transition: 1s;
   right: 0;
 }
-.menu__dishes__animation {
+.restaurant .menu__dishes__animation {
   height: 4rem;
   width: 20%;
   position: absolute;
@@ -726,43 +919,44 @@ header .fas {
   font-size: 1.5em;
   border-radius: 0 1rem 1rem 0;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
-  .menu__dishes__animation {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurant .menu__dishes__animation {
+    width: 14%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .restaurant .menu__dishes__animation {
+    width: 11%;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .restaurant .menu__dishes__animation {
     width: 13%;
   }
 }
-.menu__dishes__animation:hover, .menu__dishes__animation:active .menu__dishes {
+@media screen and (min-width: 2560px) {
+  .restaurant .menu__dishes__animation {
+    padding-bottom: 0.4rem;
+  }
+}
+.restaurant .menu__dishes__animation:hover, .restaurant .menu__dishes__animation:active .menu__dishes {
   opacity: 1;
   transform: translateX(13%);
 }
-.menu__dishes__animation .fas {
+.restaurant .menu__dishes__animation .fas {
   position: absolute;
   top: 1.3rem;
   right: 1rem;
   transform: rotate(0);
   transition: transform 1s ease-in-out;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
-  .menu__dishes__animation .fas {
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .restaurant .menu__dishes__animation .fas {
     right: 1.2rem;
   }
 }
 
-@-webkit-keyframes menuanimation {
-  0% {
-    opacity: 0;
-    transform: translateY(10%);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(5%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes menuanimation {
+@keyframes menu-animation {
   0% {
     opacity: 0;
     transform: translateY(10%);

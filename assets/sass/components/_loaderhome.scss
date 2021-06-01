@@ -3,6 +3,17 @@
 
 /* Loader */
 
+.loading {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading-page-opacity 4s ease-in-out both; 
+}
 .loader {
   position: relative;
   width: 20em;
@@ -11,25 +22,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
 &__face {
   position: absolute;
   border-radius: 50%;
   border-style: solid;
   animation: animate 3s linear infinite;
-  animation-delay: 2s;
   &:nth-child(1) {
-    width: 100%;
-    height: 100%;
+    width: 20em;
+    height: 20em;
     color: $color-secondary;
     border-color: currentColor transparent transparent currentColor;
     border-width: 0.2rem 0.2rem 0 0;
     --deg: -45deg;
     animation-direction: normal;
   }
-  &:nth-child(2) {
-    width: 70%;
-    height: 70%;
+  &:nth-child(2) {    
+    width: 17em;
+    height: 17em;
     color: $color-primary;
     border-color: currentColor currentColor transparent transparent;
     border-width: 0.2rem 0 0 0.2rem;
@@ -66,9 +75,24 @@
 }
 
 @keyframes animate {
+  from {
+    transform: rotate(0turn);
+  }
   to {
     transform: rotate(1turn);
-    opacity: 0;
-    z-index: -10;
+  }
+}
+
+@keyframes loading-page-opacity {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      z-index: -1;
+      display: none;
   }
 }

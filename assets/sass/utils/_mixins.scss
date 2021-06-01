@@ -10,7 +10,7 @@
 /*Media queries*/
 
 @mixin mobile {
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 425px) {
     @content;
   }
 }
@@ -21,8 +21,14 @@
   }
 }
 
+@mixin smalldesktop {
+  @media screen and (min-width: 1024px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media screen and (min-width: 1024px) and (max-width: 2560px) {
+  @media screen and (min-width: 1440px) and (max-width: 2560px) {
     @content;
   }
 }

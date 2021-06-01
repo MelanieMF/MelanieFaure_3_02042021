@@ -20,11 +20,26 @@
   &__title {
     font-size: 1.7em;
     margin: 1.8rem 0 1.8rem 1.8rem;
+    @include mobile {
+      margin: 1.8rem 0 0 0.8rem;
+      font-size: 1.5rem;
+    }
+    @include largescreen {
+      font-size: 2.5rem;
+    }
   }
   &__heart {
     position: absolute;
     top: 3rem;
-    right: 8rem;  
+    right: 8rem;
+    @include mobile {
+      top: 2rem;
+      right: 1.5rem;
+    }
+    @include tablet {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 }
 
@@ -58,11 +73,7 @@
     @include mobile {
       margin-left: 0;
     }
-  &__heart {
-    
   }
-  }
-}
 
 .card {
   @include desktop {
@@ -77,6 +88,9 @@
       margin-left: 0.3rem;
       @include tablet {
         margin-left: 1rem;
+      }
+      @include largescreen {
+        font-size: 1.8rem;
       }
     }
     &__underline {
@@ -98,10 +112,6 @@
   flex-direction: column;
   align-items: center;
   margin: 1rem auto;
-  opacity: 0;
-  transform: translateY(10%);
-  -webkit-animation: menuanimation 400ms ease-in-out forwards;
-          animation: menuanimation 400ms ease-in-out forwards;
   @include tablet {
     width: 60%;
     margin: auto;
@@ -120,9 +130,19 @@
     margin: 0.3rem 0.2rem 0.3rem 0;
     color: #000;
     border-radius: 1rem;
+    opacity: 0;
+    animation: menu-animation 400ms ease-in-out both;
+    @for $i from 1 to 11 {
+      &--#{$i} {
+        animation-delay: 400ms * ($i - 1);
+      }
+    }
     @include element-shadow;
     @include desktop {
       width: 98%;
+    }
+    @include largescreen {
+      padding-bottom: 0.4rem;
     }
     &__title {
       margin: 0.4rem;
@@ -130,7 +150,9 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      transition: width 400ms ease-in-out;
+      @include largescreen {
+        font-size: 1.5rem;
+      }
     }
     &__description {
       margin: 0.4rem;
@@ -138,9 +160,12 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      transition: width 400ms ease-in-out;
+
       @include mobile {
         width: 80%;
+      }
+      @include largescreen {
+        font-size: 1.3rem;
       }
     }
     &__price {
@@ -148,77 +173,73 @@
       top: 1.15rem;
       right: 1rem;
       font-weight: 500;
-    }
-    &:hover, &:active {
-      .fas {
-        transform: rotate(1turn);
+      @include largescreen {
+        font-size: 1.2rem;
       }
-    .menu__dishes__title {
-      width: 80%;
     }
+      &:hover, &:active {
+        .fas {
+          transform: rotate(1turn);
+        }
+        .menu__dishes__title {
+          width: 80%;
+        }
 
-    .menu__dishes__description {
-      width: 60%;
-    }
-
-    .menu__dishes__price {
-      transition: 1s;
-      right: 5rem
-    }
-
-    .menu__dishes__animation {
-      opacity: 1;
-      transition: 1s;
-      right: 0;
-    }
-  }
-    &__animation {
-      height: 4rem;
-      width: 20%;
-      position: absolute;
-      top: 0rem;
-      right: -6.2rem;
-      background-color: $color-tertiary;
-      color: white;
-      font-size: 1.5em;
-      border-radius: 0 1rem 1rem 0;
-      @include desktop {
-        width: 13%;
+        .menu__dishes__description {
+          width: 60%;
+        }
+        .menu__dishes__price {
+          transition: 1s;
+          right: 5rem
+        }
+        .menu__dishes__animation {
+          opacity: 1;
+          transition: 1s;
+          right: 0;
+        }
       }
-      &:hover, &:active .menu__dishes {
-        opacity: 1;
-        transform: translateX(13%);
-      }
-      .fas {
+      &__animation {
+        height: 4rem;
+        width: 20%;
         position: absolute;
-        top: 1.3rem;
-        right: 1rem;
-        transform: rotate(0);
-        transition: transform  1s ease-in-out;
+        top: 0rem;
+        right: -6.2rem;
+        background-color: $color-tertiary;
+        color: white;
+        font-size: 1.5em;
+        border-radius: 0 1rem 1rem 0;
+        @include tablet {
+          width: 14%;
+        }
+        @include smalldesktop {
+          width: 11%;
+        }
         @include desktop {
-          right: 1.2rem;
+          width: 13%;
+        }
+        @include largescreen {
+          padding-bottom: 0.4rem;
+        }
+        &:hover, &:active .menu__dishes {
+          opacity: 1;
+          transform: translateX(13%);
+        }
+        .fas {
+          position: absolute;
+          top: 1.3rem;
+          right: 1rem;
+          transform: rotate(0);
+          transition: transform  1s ease-in-out;
+          @include desktop {
+            right: 1.2rem;
+          }
         }
       }
     }
   }
 }
 
-@-webkit-keyframes menuanimation {
-  0% {
-      opacity: 0;
-      transform: translateY(10%);
-  }
-  50% {
-      opacity: 0.5;
-      transform: translateY(5%);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-@keyframes menuanimation {
+@keyframes menu-animation {
   0% {
       opacity: 0;
       transform: translateY(10%);

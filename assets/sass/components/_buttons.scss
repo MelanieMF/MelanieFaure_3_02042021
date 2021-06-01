@@ -14,9 +14,9 @@
     @include hover-shadow;
   }
   @include largescreen {
-    font-size: 1.8rem;
-    padding: 1.9rem 2rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 2rem 2.5rem;
+    font-weight: 500;
     margin: 3rem;
     border-radius: 5rem;
   }
@@ -26,6 +26,12 @@
   display: block;
   margin: 3rem auto 5rem;
   padding: 0.9rem 2.5rem;
+  @include largescreen {
+    font-size: 1.6rem;
+    padding: 1.5rem 4rem;
+    font-weight: 600;
+    border-radius: 5rem;
+  }
 }
 
 .button--heart {
@@ -33,10 +39,16 @@
   border: none;
   background: transparent;
   .far {
-    font-size: 1.7rem;
+    font-size: 2rem;
+    @include largescreen {
+      font-size: 2.5rem;
+    }
 }
 .fas {
     font-size: 2rem;
+    @include largescreen {
+      font-size: 2.5rem;
+    }
     position: absolute;
     top: 0;
     right: 0;
@@ -57,26 +69,17 @@
         color: transparent;
     }
     .fas {
-        -webkit-animation: heartanimation 1s ease-in-out forwards;
         animation: heartanimation 1s ease-in-out forwards;
     }
   }
 }
-  
-    @-webkit-keyframes heartanimation {
-      0% {
-          transform: scale(0);
-      }
-      100% {
-          transform: scale(1);
-      }
-    }
+
     
-    @keyframes heartanimation {
-      0% {
-          transform: scale(0);
-      }
-      100% {
-          transform: scale(1);
-      }
-    }
+@keyframes heartanimation {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
