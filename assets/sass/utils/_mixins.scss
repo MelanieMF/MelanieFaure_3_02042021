@@ -4,7 +4,7 @@
 }
 
 @mixin hover-shadow {
-  box-shadow: 0.1rem 0.2rem 0.3rem (darken($color-quaternary,15%));
+  box-shadow: 0.1rem 0.2rem 0.3rem (darken($color-quaternary,35%));
 }
 
 /*Media queries*/

@@ -1,9 +1,10 @@
 header {
-  margin-top: -1.2rem;
+  margin: -1.2rem 0 2rem 0;
   padding: 0;
   background-color: #fff;
   position: relative;
   @include largescreen {
+    margin-top: -2.2rem;
     font-size: 1.8rem;
   }
   .logo {
