@@ -489,6 +489,11 @@ header .fas {
 .restaurants__title {
   margin: 1rem 0.8rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants__title {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
   .restaurants__title {
     text-align: center;
