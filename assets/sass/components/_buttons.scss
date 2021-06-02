@@ -4,6 +4,7 @@
 .button {
   padding: 0.9rem 1.25rem;
   border-radius: 1.8rem;
+  cursor: pointer;
   color: #FFF;
   background: linear-gradient($color-primary, $color-secondary);
   @include element-shadow;
@@ -38,6 +39,7 @@
   position: relative;
   border: none;
   background: transparent;
+  cursor: pointer;
   .far {
     font-size: 2rem;
     color: #000;

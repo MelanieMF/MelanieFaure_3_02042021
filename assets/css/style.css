@@ -32,6 +32,7 @@ a {
 .button {
   padding: 0.9rem 1.25rem;
   border-radius: 1.8rem;
+  cursor: pointer;
   color: #FFF;
   background: linear-gradient(#9356DC, #FF79DA);
   box-shadow: 0.1rem 0.2rem 0.3rem #D3D3D3;
@@ -70,6 +71,7 @@ a {
   position: relative;
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 .button--heart .far {
   font-size: 2rem;
@@ -171,7 +173,6 @@ header .fas {
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
   .footer__title {
     text-align: center;
-    margin-left: 2rem;
   }
 }
 @media screen and (min-width: 2560px) {
@@ -184,19 +185,21 @@ header .fas {
 .footer__content {
   list-style: none;
 }
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .footer__content {
-    font-size: 1.8rem;
+    text-align: center;
+    margin-right: 2.8rem;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
   .footer__content {
     text-align: center;
+    margin-right: 2.8rem;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 2560px) {
   .footer__content {
-    text-align: center;
+    font-size: 1.8rem;
   }
 }
 .footer__content li {
@@ -276,7 +279,7 @@ header .fas {
   height: 1em;
   background-color: currentColor;
   border-radius: 50%;
-  box-shadow: 0 0 2em, 0 0 4em, 0 0 6em, 0 0 8em, 0 0 10em, 0 0 0 0.5em rgba(255, 255, 0, 0.1);
+  box-shadow: 0 0 2em;
 }
 
 @keyframes animate {
@@ -637,7 +640,6 @@ header .fas {
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
   .footer__title {
     text-align: center;
-    margin-left: 2rem;
   }
 }
 @media screen and (min-width: 2560px) {
@@ -650,19 +652,21 @@ header .fas {
 .footer__content {
   list-style: none;
 }
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .footer__content {
-    font-size: 1.8rem;
+    text-align: center;
+    margin-right: 2.8rem;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
   .footer__content {
     text-align: center;
+    margin-right: 2.8rem;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 2560px) {
   .footer__content {
-    text-align: center;
+    font-size: 1.8rem;
   }
 }
 .footer__content li {
@@ -903,7 +907,7 @@ header .fas {
   transform: rotate(1turn);
 }
 .restaurant .menu__dishes:hover .menu__dishes__title, .restaurant .menu__dishes:active .menu__dishes__title {
-  width: 80%;
+  width: 75%;
 }
 .restaurant .menu__dishes:hover .menu__dishes__description, .restaurant .menu__dishes:active .menu__dishes__description {
   width: 60%;

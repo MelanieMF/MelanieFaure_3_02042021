@@ -152,7 +152,6 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-
       @include mobile {
         width: 80%;
       }
@@ -174,7 +173,7 @@
           transform: rotate(1turn);
         }
         .menu__dishes__title {
-          width: 80%;
+          width: 75%;
         }
 
         .menu__dishes__description {
